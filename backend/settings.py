@@ -112,6 +112,8 @@ AUTH_PASSWORD_VALIDATORS = [
 #Configuración Django Rest Framework
 # https://www.django-rest-framework.org/api-guide/settings/
 REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'api.pagination.PageNumberPagination',
+    'PAGE_SIZE': 5,
     'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework.authentication.SessionAuthentication',
@@ -126,7 +128,7 @@ REST_FRAMEWORK = {
 # Internationalization
 # https://docs.djangoproject.com/en/5.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es'
 
 TIME_ZONE = 'UTC'
 

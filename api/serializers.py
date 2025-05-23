@@ -1,8 +1,8 @@
 from rest_framework import serializers
-from .models import Animal
+from .models import Mascota
 
-class AnimalSerializer(serializers.ModelSerializer):
+class MascotaSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Animal
+        model = Mascota
         fields = '__all__'
-    read_only_fields = ['id','fecha_registro']
+        read_only_fields = ['id','fecha_registro']
